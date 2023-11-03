@@ -11,16 +11,15 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringRunner.class)
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest
 @AutoConfigureMockMvc
 class CardatabaseApplicationTests {
 
 	@Autowired
+	private MockMvc mockMvc;
+	
+	@Autowired
 	private CarController carController;
-
-//	@Autowired
-//	private MockMvc mockMvc;
 
 	@Test
 	void contextLoads() {
